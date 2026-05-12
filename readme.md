@@ -225,6 +225,21 @@ docker run -d \
 -v $(pwd)/index.html:/usr/share/nginx/html/index.html \
 nginx
 ```
+Aquí me ha dado error al descargar la imagen de nginx, así que he tenido que cambiar el servidor por defecto de Docker Engine a un mirror de google. Así queda el json:
+```text
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "registry-mirrors": [
+    "https://mirror.gcr.io"
+  ]
+}
+```
 
 Abrimos en navegador:
 
